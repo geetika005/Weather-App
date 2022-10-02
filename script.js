@@ -16,9 +16,10 @@ let weather = {
         return response.json();
       })
       .then((data) => this.displayWeather(data));
-  },
-  displayWeather: function (data,city) {
     const { name } = city;
+  },
+  displayWeather: function (data) {
+    
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const temp2 = temp * 1.8 + 32;
